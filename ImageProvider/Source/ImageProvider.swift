@@ -21,7 +21,7 @@ class ImageProvider {
   
   // MARK: - Propeties
   
-  /// handle getting image from remote server
+  /// Handle getting image from remote server
   ///
   private let viewModel: ImageProviderViewModel
   
@@ -37,7 +37,7 @@ class ImageProvider {
   
   // MARK: - Handlers
   
-  /// getting user image either from cache or remote in case of first time
+  /// Getting user image either from cache or remote in case of first time
   ///
   func getImage(with urlString: String?, completion: Completion?) {
     
@@ -69,7 +69,7 @@ private extension ImageProvider {
     }
   }
   
-  /// get image from cache if exist
+  /// Get image from cache if exist
   ///
   func getCachedImage(with urlString: String) -> UIImage? {
     
@@ -78,9 +78,9 @@ private extension ImageProvider {
       return imageFromRam
     }
     
-    // get image if cache in Dirctory
+    // Get image if cache in Dirctory
     if let imageFromDirctory = getCachedImageFromDirctory(key: urlString) {
-      // cache in memory in case of cached in dirctory only
+      // Cache in memory in case of cached in dirctory only
       cacheImageInRAM(image: imageFromDirctory, with: urlString)
       return imageFromDirctory
     }
@@ -88,7 +88,7 @@ private extension ImageProvider {
     return nil
   }
   
-  /// cacheing image with `urlString`which is urlString
+  /// Cacheing image with `urlString`which is urlString
   func cache(_ image: UIImage?, with urlString: String) {
     guard let image = image else { return }
     cacheImageInRAM(image: image, with: urlString)
@@ -130,7 +130,7 @@ private extension ImageProvider {
     return ImageProvider.imageCache.object(forKey: key as AnyObject) as? UIImage
   }
   
-  /// Return path about cached images for specific image with `urlString`
+  /// Get path about cached images for specific image with `urlString`
   ///
   func cacheFileUrl(_ urlString: String) -> URL {
     let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!

@@ -15,7 +15,7 @@ class ImageProviderViewModel {
   
   // MARK: - Handlers
   
-  /// get  image by urlString and complete with image
+  /// Get  image by urlString and complete with image
   ///
   func loadImage(from imageURL: String, completion: @escaping (_ image: UIImage?) -> Void) {
     guard let url = URL(string: imageURL) else { return }
