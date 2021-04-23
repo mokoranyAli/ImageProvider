@@ -17,7 +17,6 @@ class ImageProviderViewModel {
   
   /// get  image by urlString and complete with image
   ///
-  //MARK: - Fetch image from URL and Images cache
   func loadImage(from imageURL: String, completion: @escaping (_ image: UIImage?) -> Void) {
     guard let url = URL(string: imageURL) else { return }
     guard let data = try? Data(contentsOf: url) else {
