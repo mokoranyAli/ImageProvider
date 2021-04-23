@@ -9,13 +9,13 @@
 import Foundation
 import class UIKit.UIImage
 
-// MARK: - ImageHandlerViewModel
+// MARK: - ImageProviderViewModel
 //
 class ImageProviderViewModel {
   
   // MARK: - Handlers
   
-  /// get u image by urlString and complete with image
+  /// get  image by urlString and complete with image
   ///
   //MARK: - Fetch image from URL and Images cache
   func loadImage(from imageURL: String, completion: @escaping (_ image: UIImage?) -> Void) {

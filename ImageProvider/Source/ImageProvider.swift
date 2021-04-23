@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - ImageHandler
 
-/// also cacheing operations and getting the actual image
+/// Get image from remote and hadndler cacheing operations
 ///
 class ImageProvider {
     
