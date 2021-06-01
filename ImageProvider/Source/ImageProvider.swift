@@ -15,9 +15,16 @@ import UIKit
 ///
 class ImageProvider {
   
+    
+  // MARK: - Typealiass
+ 
   /// Completion
   ///
   typealias Completion = (UIImage?) -> Void
+  
+  /// This is the same original UIImage, we just do it cause handle for viewModel
+  /// Cause viewModel do logic and we shouldn't need to import UIKit in viewModel
+  typealias LoadedImage = UIImage
   
   // MARK: - Propeties
   

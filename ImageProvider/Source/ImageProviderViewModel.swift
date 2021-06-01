@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import class UIKit.UIImage
 
 // MARK: - ImageProviderViewModel
 //
@@ -17,12 +16,12 @@ class ImageProviderViewModel {
   
   /// Get  image by urlString and complete with image
   ///
-  func loadImage(from imageURL: String, completion: @escaping (_ image: UIImage?) -> Void) {
+    func loadImage(from imageURL: String, completion: @escaping (_ image: ImageProvider.LoadedImage?) -> Void) {
     guard let url = URL(string: imageURL) else { return }
     guard let data = try? Data(contentsOf: url) else {
       return
     }
-    completion(UIImage(data: data))
+    completion(ImageProvider.LoadedImage(data: data))
     
   }
 }
